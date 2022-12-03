@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Open Sans, YuGothic, sans-serif;
 }
 
+/* giao diện tối */
+:root {
+    --background-color: #ffb400;
+    --brown-color: #a7a1a1;
+    --boxshadow-color: 0 0 7px rgb(0 0 0 / 90%);
+    --white-hover-color: #fff;
+    --green-color: #72b626;
+    --background-boder: #252525;
+    --background-hover: hsl(0, 0%, 0%, 0.5);
+    --nav-color: #2b2a2a;
+    --white-color: #fff;
+    --black-color: #000000;
+    --black-07: hsla(0, 0%, 100%, 0.07);
+    --border-color: #000000;
+    --icon-color: #fff;
+}
+
+/* giao diện sáng */
+.light {
+    --background-color: #72b626;
+    --white-color: hsl(0, 0%, 0%, 0.7);
+    --black-color: #fff;
+    --background-boder: #eee;
+    --nav-color: #eee;
+    --black-07: #1e253012;
+    --background-hover: hsl(0, 0%, 0%, 0.25);
+    --border-color: hsl(0, 0%, 0%, 0.3);
+}
+
+.App {
+    text-align: center;
+}
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* set */
+::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    background-clip: content-box;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #a7a1a1;
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+@keyframes animation-app-delay {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0;
+    }
 }
