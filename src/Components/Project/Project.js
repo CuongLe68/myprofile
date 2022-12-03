@@ -102,6 +102,10 @@ function Project() {
                             <span>Fronted: HTML, CSS, JS</span>
                             <span>Backend: null</span>
                             <span>
+                                Github:{' '}
+                                <a href="https://github.com/CuongLe68/shoppet">https://github.com/CuongLe68/shoppet</a>
+                            </span>
+                            <span>
                                 Demo: <a href="https://shoppet.vercel.app/">https://shoppet.vercel.app</a>
                             </span>
                         </div>
