@@ -53,13 +53,59 @@ function Project() {
 
     //show info project
     const handleInfo = () => {
-        const box = document.querySelector('.project-container-body-box');
+        const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'flex';
     };
 
+    //close info project
     const closeInfo = () => {
-        const box = document.querySelector('.project-container-body-box');
+        const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'none';
+    };
+
+    //slide
+    let CURRENT_SLIDE = 0;
+    const handleSlides = (e) => {
+        if (e.classList[1] === 'project-container-wrapper-box-item-left-next') {
+            CURRENT_SLIDE++;
+            const slides = document.querySelectorAll('.project-container-wrapper-box-item-imgs-img');
+            if (CURRENT_SLIDE < 4) {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.width = '0';
+                }
+                slides[CURRENT_SLIDE].style.width = '100%';
+            } else {
+                CURRENT_SLIDE = 3;
+            }
+        } else {
+            CURRENT_SLIDE--;
+            const slides = document.querySelectorAll('.project-container-wrapper-box-item-imgs-img');
+            if (CURRENT_SLIDE >= 0) {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.width = '0';
+                }
+                slides[CURRENT_SLIDE].style.width = '100%';
+            } else {
+                CURRENT_SLIDE = 0;
+            }
+        }
+
+        //Ẩn hiện icon
+        if (CURRENT_SLIDE > 0) {
+            document.querySelector('.project-container-wrapper-box-item-left-prev>svg').style.opacity = '1';
+            document.querySelector('.project-container-wrapper-box-item-left-prev>svg').style.cursor = 'pointer';
+        } else if (CURRENT_SLIDE === 0) {
+            document.querySelector('.project-container-wrapper-box-item-left-prev>svg').style.opacity = '0.4';
+            document.querySelector('.project-container-wrapper-box-item-left-prev>svg').style.cursor = 'default';
+        }
+
+        if (CURRENT_SLIDE < 3) {
+            document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.opacity = '1';
+            document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.cursor = 'pointer';
+        } else if (CURRENT_SLIDE === 3) {
+            document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.opacity = '0.4';
+            document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.cursor = 'default';
+        }
     };
     return (
         <div className="project-container">
@@ -70,30 +116,42 @@ function Project() {
                 </h1>
                 <span className="project-container-title-block">works</span>
             </header>
-            <div className="project-container-body">
-                <div className="project-container-body-box">
-                    <div className="project-container-body-box-icon" onClick={() => closeInfo()}>
+            {/* show box */}
+            <div className="project-container-wrapper">
+                <div className="project-container-wrapper-box">
+                    <div className="project-container-wrapper-box-icon" onClick={() => closeInfo()}>
                         <FontAwesomeIcon icon={faXmark} />
                     </div>
-                    <div className="project-container-body-box-item">
-                        <div className="project-container-body-box-item-left">
-                            <h3 className="project-container-body-box-item-title">SHOPPET</h3>
-                            <div className="project-container-body-box-item-left-icon project-container-body-box-item-left-prev">
+                    <div className="project-container-wrapper-box-item">
+                        <div className="project-container-wrapper-box-item-left">
+                            <h3 className="project-container-wrapper-box-item-title">SHOPPET</h3>
+                            <div
+                                className="project-container-wrapper-box-item-left-icon project-container-wrapper-box-item-left-prev"
+                                onClick={(e) => handleSlides(e.currentTarget)}
+                            >
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </div>
-                            <div className="project-container-body-box-item-imgs"></div>
-                            <div className="project-container-body-box-item-left-icon project-container-body-box-item-left-next">
+                            <div className="project-container-wrapper-box-item-imgs">
+                                <div className="project-container-wrapper-box-item-imgs-img"></div>
+                                <div className="project-container-wrapper-box-item-imgs-img"></div>
+                                <div className="project-container-wrapper-box-item-imgs-img"></div>
+                                <div className="project-container-wrapper-box-item-imgs-img"></div>
+                            </div>
+                            <div
+                                className="project-container-wrapper-box-item-left-icon project-container-wrapper-box-item-left-next"
+                                onClick={(e) => handleSlides(e.currentTarget)}
+                            >
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </div>
-                            <div className="project-container-body-box-item-slides">
-                                <div className="project-container-body-box-item-slide"></div>
-                                <div className="project-container-body-box-item-slide"></div>
-                                <div className="project-container-body-box-item-slide"></div>
-                                <div className="project-container-body-box-item-slide"></div>
+                            <div className="project-container-wrapper-box-item-slides">
+                                <div className="project-container-wrapper-box-item-slide"></div>
+                                <div className="project-container-wrapper-box-item-slide"></div>
+                                <div className="project-container-wrapper-box-item-slide"></div>
+                                <div className="project-container-wrapper-box-item-slide"></div>
                             </div>
                         </div>
-                        <div className="project-container-body-box-item-right">
-                            <h3 className="project-container-body-box-item-title">PROFILE SHOPPET</h3>
+                        <div className="project-container-wrapper-box-item-right">
+                            <h3 className="project-container-wrapper-box-item-title">PROFILE SHOPPET</h3>
                             <span>
                                 Sản phẩm đầu tiên, trang web thương mại điện tử sử dụng HTML, CSS và JS. Web về bán các
                                 loại thú cưng và thức ăn cho thú cưng.
@@ -111,6 +169,9 @@ function Project() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="project-container-body">
+                {/* info project */}
                 <ul>
                     <li className="project-container-body-item1" onClick={(e) => handleProject(e.currentTarget)}>
                         ALL
@@ -125,7 +186,7 @@ function Project() {
                         ReactJS/NodeJS/MongoDB
                     </li>
                 </ul>
-                {/* 29/11 animation lỗi, click vào chưa show ra thông tin */}
+
                 <div className="project-container-body-items">
                     <div className="project-container-body-items-item1" onClick={() => handleInfo()}>
                         <h3>shoppet</h3>
