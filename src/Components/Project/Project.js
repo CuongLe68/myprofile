@@ -1,7 +1,96 @@
 import { faChevronLeft, faChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Project.css';
+
+//fake data
+var listProject = [
+    {
+        id: 1,
+        Title: 'SHOPPET',
+        Description:
+            'Sản phẩm đầu tiên, trang web thương mại điện tử sử dụng HTML CSS và JS. Web về bán các loại thú cưng và thức ăn cho thú cưng.',
+        Role: 'Frontend',
+        Frontend: 'HTML, CSS, JS',
+        Backend: 'null',
+        Database: 'null',
+        Github: 'https://github.com/CuongLe68/shoppet',
+        Demo: 'https://shoppet.vercel.app',
+        avatar: 'shoppet1.png',
+        img1: 'shoppet1.png',
+        img2: 'shoppet2.png',
+        img3: 'shoppet3.png',
+        img4: 'shoppet14.png',
+    },
+    {
+        id: 2,
+        Title: 'SNAKE',
+        Description: 'Trang web thương mại điện tử sử dụng HTML SCSS và JS. Giao diện website bán các loại giày.',
+        Role: 'Frontend',
+        Frontend: 'HTML, SCSS, JS',
+        Backend: 'null',
+        Database: 'null',
+        Github: 'https://github.com/CuongLe68/GiayTheThao',
+        Demo: 'https://cuongle68.github.io/GiayTheThao/',
+        avatar: 'giaythethao1.png',
+        img1: 'giaythethao1.png',
+        img2: 'giaythethao2.png',
+        img3: 'giaythethao3.png',
+        img4: 'giaythethao3.png',
+    },
+    {
+        id: 3,
+        Title: 'PROFILE',
+        Description:
+            'Trang web profile cá nhân sử dụng HTML, CSS và JS. Web về thông tin cá nhân bản thân,thông tin liên lạc, các sở thích và mục tiêu tương lai!',
+        Role: 'Frontend',
+        Frontend: 'HTML, CSS, JS, ReactJS',
+        Backend: 'null',
+        Database: 'null',
+        Github: 'https://github.com/CuongLe68/myprofile',
+        Demo: 'https://cuongle.vercel.app/',
+        avatar: 'profile1.png',
+        img1: 'profile1.png',
+        img2: 'profile2.png',
+        img3: 'profile3.png',
+        img4: 'profile4.png',
+    },
+    {
+        id: 4,
+        Title: 'COURSES',
+        Description:
+            'Trang web đầu tiên sử dụng Bootstrap và NodeJs. Web về CURD khóa học, khôi phục và xem video khóa học.',
+        Role: 'Frontend',
+        Frontend: 'HTML, CSS, JS, Bootstrap',
+        Backend: 'NodeJS',
+        Database: 'MongoDB',
+        Github: 'https://github.com/CuongLe68/courses',
+        Demo: 'null',
+        avatar: 'course4.png',
+        img1: 'course1.png',
+        img2: 'course2.png',
+        img3: 'course3.png',
+        img4: 'course4.png',
+    },
+    {
+        id: 5,
+        Title: 'CLONE VCB',
+        Description:
+            'Trang web clone về ngân hàng VietComBank. Web về CURD account, đăng ký, đằn nhập, phân quyền, chuyển tiền, nhắn tin, sử dụng thư viện socket.io, sử dụng usename và pass tại README github để test.',
+        Role: 'Frontend',
+        Frontend: 'HTML, CSS, JS, ReactJS, ReduxToolkit',
+        Backend: 'NodeJS, Socket.io',
+        Database: 'MongoDB',
+        Github: 'https://github.com/CuongLe68/bank',
+        Demo: 'null',
+        avatar: 'vcb2.png',
+        img1: 'vcb1.png',
+        img2: 'vcb2.png',
+        img3: 'vcb3.png',
+        img4: 'vcb4.png',
+    },
+];
 
 function Project() {
     const handleProject = (e) => {
@@ -52,9 +141,13 @@ function Project() {
     };
 
     //show info project
-    const handleInfo = () => {
+    const [currentProject, setCurrentProject] = useState('');
+    const handleInfo = (e) => {
         const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'flex';
+        listProject.map((item) => {
+            return `project-container-body-items-item${item.id}` === e.className ? setCurrentProject(item) : '';
+        });
     };
 
     //close info project
@@ -140,7 +233,7 @@ function Project() {
                     </div>
                     <div className="project-container-wrapper-box-item">
                         <div className="project-container-wrapper-box-item-left">
-                            <h3 className="project-container-wrapper-box-item-title">SHOPPET</h3>
+                            <h3 className="project-container-wrapper-box-item-title">{currentProject.Title}</h3>
                             <div
                                 className="project-container-wrapper-box-item-left-icon project-container-wrapper-box-item-left-prev"
                                 onClick={(e) => handleSlides(e.currentTarget)}
@@ -187,20 +280,17 @@ function Project() {
                             </div>
                         </div>
                         <div className="project-container-wrapper-box-item-right">
-                            <h3 className="project-container-wrapper-box-item-title">PROFILE SHOPPET</h3>
+                            <h3 className="project-container-wrapper-box-item-title">PROFILE {currentProject.Title}</h3>
+                            <span>{currentProject.Description}</span>
+                            <span>Role: {currentProject.Role}</span>
+                            <span>Fronted: {currentProject.Frontend}</span>
+                            <span>Backend: {currentProject.Backend}</span>
+                            <span>Database: {currentProject.Database}</span>
                             <span>
-                                Sản phẩm đầu tiên, trang web thương mại điện tử sử dụng HTML, CSS và JS. Web về bán các
-                                loại thú cưng và thức ăn cho thú cưng.
-                            </span>
-                            <span>Role: Frontend</span>
-                            <span>Fronted: HTML, CSS, JS</span>
-                            <span>Backend: null</span>
-                            <span>
-                                Github:{' '}
-                                <a href="https://github.com/CuongLe68/shoppet">https://github.com/CuongLe68/shoppet</a>
+                                Github: <a href={currentProject.Github}>{currentProject.Github}</a>
                             </span>
                             <span>
-                                Demo: <a href="https://shoppet.vercel.app/">https://shoppet.vercel.app</a>
+                                Demo: <a href={currentProject.Demo}>{currentProject.Demo}</a>
                             </span>
                         </div>
                     </div>
@@ -224,19 +314,19 @@ function Project() {
                 </ul>
 
                 <div className="project-container-body-items">
-                    <div className="project-container-body-items-item1" onClick={() => handleInfo()}>
+                    <div className="project-container-body-items-item1" onClick={(e) => handleInfo(e.currentTarget)}>
                         <h3>shoppet</h3>
                     </div>
-                    <div className="project-container-body-items-item2" onClick={() => handleInfo()}>
+                    <div className="project-container-body-items-item2" onClick={(e) => handleInfo(e.currentTarget)}>
                         <h3>snake</h3>
                     </div>
-                    <div className="project-container-body-items-item3" onClick={() => handleInfo()}>
+                    <div className="project-container-body-items-item3" onClick={(e) => handleInfo(e.currentTarget)}>
                         <h3>profile</h3>
                     </div>
-                    <div className="project-container-body-items-item4" onClick={() => handleInfo()}>
+                    <div className="project-container-body-items-item4" onClick={(e) => handleInfo(e.currentTarget)}>
                         <h3>courses</h3>
                     </div>
-                    <div className="project-container-body-items-item5" onClick={() => handleInfo()}>
+                    <div className="project-container-body-items-item5" onClick={(e) => handleInfo(e.currentTarget)}>
                         <h3>bank</h3>
                     </div>
                 </div>
