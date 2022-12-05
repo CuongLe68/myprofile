@@ -63,31 +63,47 @@ function Project() {
         box.style.display = 'none';
     };
 
-    //slide
+    //lightbox
     let CURRENT_SLIDE = 0;
+    let LAST_SLIDE = 0;
+    const handleLightbox = (e) => {
+        CURRENT_SLIDE = Number(e.className.split(' ', 2)[1].split('-')[3]); //set current slide
+
+        //handle img slides show
+        handleSlides(e);
+
+        //handle img lightbox
+        document.querySelector(`.project-container-wrapper-box-item-slide-${LAST_SLIDE}`).style.background =
+            'var(--background-hover)'; //làm mờ ảnh trước
+        document.querySelector(`.project-container-wrapper-box-item-slide-${CURRENT_SLIDE}`).style.background =
+            'transparent'; //hiển thị ảnh vừa click
+        LAST_SLIDE = CURRENT_SLIDE;
+    };
+
+    //slides
     const handleSlides = (e) => {
+        const slides = document.querySelectorAll('.project-container-wrapper-box-item-imgs-img');
         if (e.classList[1] === 'project-container-wrapper-box-item-left-next') {
             CURRENT_SLIDE++;
-            const slides = document.querySelectorAll('.project-container-wrapper-box-item-imgs-img');
             if (CURRENT_SLIDE < 4) {
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.width = '0';
-                }
+                slides[CURRENT_SLIDE - 1].style.width = '0';
                 slides[CURRENT_SLIDE].style.width = '100%';
             } else {
                 CURRENT_SLIDE = 3;
             }
-        } else {
+        } else if (e.classList[1] === 'project-container-wrapper-box-item-left-prev') {
             CURRENT_SLIDE--;
-            const slides = document.querySelectorAll('.project-container-wrapper-box-item-imgs-img');
             if (CURRENT_SLIDE >= 0) {
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.width = '0';
-                }
+                slides[CURRENT_SLIDE + 1].style.width = '0';
                 slides[CURRENT_SLIDE].style.width = '100%';
             } else {
                 CURRENT_SLIDE = 0;
             }
+        } else {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.width = '0';
+            }
+            slides[CURRENT_SLIDE].style.width = '100%';
         }
 
         //Ẩn hiện icon
@@ -144,10 +160,30 @@ function Project() {
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </div>
                             <div className="project-container-wrapper-box-item-slides">
-                                <div className="project-container-wrapper-box-item-slide"></div>
-                                <div className="project-container-wrapper-box-item-slide"></div>
-                                <div className="project-container-wrapper-box-item-slide"></div>
-                                <div className="project-container-wrapper-box-item-slide"></div>
+                                <div
+                                    className="project-container-wrapper-box-item-slide project-container-slide-0"
+                                    onClick={(e) => handleLightbox(e.currentTarget)}
+                                >
+                                    <div className="project-container-wrapper-box-item-slide-0"></div>
+                                </div>
+                                <div
+                                    className="project-container-wrapper-box-item-slide project-container-slide-1"
+                                    onClick={(e) => handleLightbox(e.currentTarget)}
+                                >
+                                    <div className="project-container-wrapper-box-item-slide-1"></div>
+                                </div>
+                                <div
+                                    className="project-container-wrapper-box-item-slide project-container-slide-2"
+                                    onClick={(e) => handleLightbox(e.currentTarget)}
+                                >
+                                    <div className="project-container-wrapper-box-item-slide-2"></div>
+                                </div>
+                                <div
+                                    className="project-container-wrapper-box-item-slide project-container-slide-3"
+                                    onClick={(e) => handleLightbox(e.currentTarget)}
+                                >
+                                    <div className="project-container-wrapper-box-item-slide-3"></div>
+                                </div>
                             </div>
                         </div>
                         <div className="project-container-wrapper-box-item-right">
