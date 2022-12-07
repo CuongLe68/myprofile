@@ -93,6 +93,9 @@ var listProject = [
 ];
 
 function Project() {
+    let CURRENT_SLIDE = 0;
+    let LAST_SLIDE = 0;
+
     const handleProject = (e) => {
         if (e.className === 'project-container-body-item1') {
             document.querySelector('.project-container-body-item1').style.backgroundColor = '#ffb400';
@@ -143,6 +146,10 @@ function Project() {
     //show info project
     const [currentProject, setCurrentProject] = useState('');
     const handleInfo = (e) => {
+        CURRENT_SLIDE = 0;
+        LAST_SLIDE = 0;
+        console.log(CURRENT_SLIDE + ' - ' + LAST_SLIDE);
+
         const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'flex';
         listProject.map((item) => {
@@ -157,20 +164,11 @@ function Project() {
     };
 
     //lightbox
-    let CURRENT_SLIDE = 0;
-    let LAST_SLIDE = 0;
     const handleLightbox = (e) => {
         CURRENT_SLIDE = Number(e.className.split(' ', 2)[1].split('-')[3]); //set current slide
 
         //handle img slides show
         handleSlides(e);
-
-        //handle img lightbox
-        document.querySelector(`.project-container-wrapper-box-item-slide-${LAST_SLIDE}`).style.background =
-            'var(--background-hover)'; //làm mờ ảnh trước
-        document.querySelector(`.project-container-wrapper-box-item-slide-${CURRENT_SLIDE}`).style.background =
-            'transparent'; //hiển thị ảnh vừa click
-        LAST_SLIDE = CURRENT_SLIDE;
     };
 
     //slides
@@ -199,6 +197,13 @@ function Project() {
             slides[CURRENT_SLIDE].style.width = '100%';
         }
 
+        //handle img lightbox
+        document.querySelector(`.project-container-wrapper-box-item-slide-${LAST_SLIDE}`).style.background =
+            'var(--background-hover)'; //làm mờ ảnh trước
+        document.querySelector(`.project-container-wrapper-box-item-slide-${CURRENT_SLIDE}`).style.background =
+            'transparent'; //hiển thị ảnh vừa click
+        LAST_SLIDE = CURRENT_SLIDE;
+
         //Ẩn hiện icon
         if (CURRENT_SLIDE > 0) {
             document.querySelector('.project-container-wrapper-box-item-left-prev>svg').style.opacity = '1';
@@ -215,6 +220,7 @@ function Project() {
             document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.opacity = '0.4';
             document.querySelector('.project-container-wrapper-box-item-left-next>svg').style.cursor = 'default';
         }
+        console.log('first slide: ' + LAST_SLIDE + '\n current slide: ' + CURRENT_SLIDE);
     };
     return (
         <div className="project-container">
