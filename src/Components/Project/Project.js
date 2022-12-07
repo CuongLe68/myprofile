@@ -148,7 +148,6 @@ function Project() {
     const handleInfo = (e) => {
         CURRENT_SLIDE = 0;
         LAST_SLIDE = 0;
-        console.log(CURRENT_SLIDE + ' - ' + LAST_SLIDE);
 
         const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'flex';
