@@ -164,6 +164,22 @@
 
 .project-container-wrapper-box-item-imgs-img:nth-child(1) {
     width: 100%;
+
+    /* khai báo để có link img trong listProject, có api thật thì không cần khai báo cài này */
+    background-image: url('../../assets/imgs/shoppet2.png');
+    background-image: url('../../assets/imgs/shoppet3.png');
+    background-image: url('../../assets/imgs/shoppet4.png');
+    background-image: url('../../assets/imgs/giaythethao2.png');
+    background-image: url('../../assets/imgs/giaythethao3.png');
+    background-image: url('../../assets/imgs/profile2.png');
+    background-image: url('../../assets/imgs/profile3.png');
+    background-image: url('../../assets/imgs/profile4.png');
+    background-image: url('../../assets/imgs/course2.png');
+    background-image: url('../../assets/imgs/course3.png');
+    background-image: url('../../assets/imgs/course4.png');
+    background-image: url('../../assets/imgs/vcb2.png');
+    background-image: url('../../assets/imgs/vcb3.png');
+    background-image: url('../../assets/imgs/vcb4.png');
 }
 
 .project-container-wrapper-box-item-left-icon {
