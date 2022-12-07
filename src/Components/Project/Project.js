@@ -17,11 +17,11 @@ var listProject = [
         Database: 'null',
         Github: 'https://github.com/CuongLe68/shoppet',
         Demo: 'https://shoppet.vercel.app',
-        avatar: 'shoppet1.png',
-        img1: 'shoppet1.png',
-        img2: 'shoppet2.png',
-        img3: 'shoppet3.png',
-        img4: 'shoppet14.png',
+        avatar: 'http://localhost:3000/static/media/shoppet1.10327e7f0605339483fe.png',
+        img1: 'http://localhost:3000/static/media/shoppet1.10327e7f0605339483fe.png',
+        img2: 'http://localhost:3000/static/media/shoppet2.1d2fe83d1b69fa8effef.png',
+        img3: 'http://localhost:3000/static/media/shoppet3.f229f297862354944c3b.png',
+        img4: 'http://localhost:3000/static/media/shoppet4.a71cb458c1bd87829767.png',
     },
     {
         id: 2,
@@ -33,11 +33,11 @@ var listProject = [
         Database: 'null',
         Github: 'https://github.com/CuongLe68/GiayTheThao',
         Demo: 'https://cuongle68.github.io/GiayTheThao/',
-        avatar: 'giaythethao1.png',
-        img1: 'giaythethao1.png',
-        img2: 'giaythethao2.png',
-        img3: 'giaythethao3.png',
-        img4: 'giaythethao3.png',
+        avatar: 'http://localhost:3000/static/media/giaythethao1.8c82cd99027a7eb0a4f1.png',
+        img1: 'http://localhost:3000/static/media/giaythethao1.8c82cd99027a7eb0a4f1.png',
+        img2: 'http://localhost:3000/static/media/giaythethao2.ed5883c072aa28e22a53.png',
+        img3: 'http://localhost:3000/static/media/giaythethao3.32418b5fb7193c58a835.png',
+        img4: 'http://localhost:3000/static/media/giaythethao1.8c82cd99027a7eb0a4f1.png',
     },
     {
         id: 3,
@@ -50,11 +50,11 @@ var listProject = [
         Database: 'null',
         Github: 'https://github.com/CuongLe68/myprofile',
         Demo: 'https://cuongle.vercel.app/',
-        avatar: 'profile1.png',
-        img1: 'profile1.png',
-        img2: 'profile2.png',
-        img3: 'profile3.png',
-        img4: 'profile4.png',
+        avatar: 'http://localhost:3000/static/media/profile1.1ee2e1a35598d58ed911.png',
+        img1: 'http://localhost:3000/static/media/profile1.1ee2e1a35598d58ed911.png',
+        img2: 'http://localhost:3000/static/media/profile2.0675fc2a1d63ad2eb856.png',
+        img3: 'http://localhost:3000/static/media/profile3.50f7924a1a0b41f78d92.png',
+        img4: 'http://localhost:3000/static/media/profile4.30a0daaa6871125d053d.png',
     },
     {
         id: 4,
@@ -67,11 +67,11 @@ var listProject = [
         Database: 'MongoDB',
         Github: 'https://github.com/CuongLe68/courses',
         Demo: 'null',
-        avatar: 'course4.png',
-        img1: 'course1.png',
-        img2: 'course2.png',
-        img3: 'course3.png',
-        img4: 'course4.png',
+        avatar: 'http://localhost:3000/static/media/course1.9e67fd7ad1372fc16823.png',
+        img1: 'http://localhost:3000/static/media/course1.9e67fd7ad1372fc16823.png',
+        img2: 'http://localhost:3000/static/media/course2.de864477135c62ec5b15.png',
+        img3: 'http://localhost:3000/static/media/course3.5e09ce14cfcb221589b7.png',
+        img4: 'http://localhost:3000/static/media/course4.a34b8f395d83cf4e1303.png',
     },
     {
         id: 5,
@@ -84,11 +84,11 @@ var listProject = [
         Database: 'MongoDB',
         Github: 'https://github.com/CuongLe68/bank',
         Demo: 'null',
-        avatar: 'vcb2.png',
-        img1: 'vcb1.png',
-        img2: 'vcb2.png',
-        img3: 'vcb3.png',
-        img4: 'vcb4.png',
+        avatar: 'http://localhost:3000/static/media/vcb1.830743b6175791c77cc2.png',
+        img1: 'http://localhost:3000/static/media/vcb1.830743b6175791c77cc2.png',
+        img2: 'http://localhost:3000/static/media/vcb2.b6442f08ace758200d73.png',
+        img3: 'http://localhost:3000/static/media/vcb3.36af47358d14247ba07b.png',
+        img4: 'http://localhost:3000/static/media/vcb4.004bbbee0d7b95197f57.png',
     },
 ];
 
@@ -241,10 +241,22 @@ function Project() {
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </div>
                             <div className="project-container-wrapper-box-item-imgs">
-                                <div className="project-container-wrapper-box-item-imgs-img"></div>
-                                <div className="project-container-wrapper-box-item-imgs-img"></div>
-                                <div className="project-container-wrapper-box-item-imgs-img"></div>
-                                <div className="project-container-wrapper-box-item-imgs-img"></div>
+                                <div
+                                    className="project-container-wrapper-box-item-imgs-img"
+                                    style={{ backgroundImage: `url(${currentProject.img1})` }}
+                                ></div>
+                                <div
+                                    className="project-container-wrapper-box-item-imgs-img"
+                                    style={{ backgroundImage: `url(${currentProject.img2})` }}
+                                ></div>
+                                <div
+                                    className="project-container-wrapper-box-item-imgs-img"
+                                    style={{ backgroundImage: `url(${currentProject.img3})` }}
+                                ></div>
+                                <div
+                                    className="project-container-wrapper-box-item-imgs-img"
+                                    style={{ backgroundImage: `url(${currentProject.img4})` }}
+                                ></div>
                             </div>
                             <div
                                 className="project-container-wrapper-box-item-left-icon project-container-wrapper-box-item-left-next"
@@ -256,24 +268,28 @@ function Project() {
                                 <div
                                     className="project-container-wrapper-box-item-slide project-container-slide-0"
                                     onClick={(e) => handleLightbox(e.currentTarget)}
+                                    style={{ backgroundImage: `url(${currentProject.img1})` }}
                                 >
                                     <div className="project-container-wrapper-box-item-slide-0"></div>
                                 </div>
                                 <div
                                     className="project-container-wrapper-box-item-slide project-container-slide-1"
                                     onClick={(e) => handleLightbox(e.currentTarget)}
+                                    style={{ backgroundImage: `url(${currentProject.img2})` }}
                                 >
                                     <div className="project-container-wrapper-box-item-slide-1"></div>
                                 </div>
                                 <div
                                     className="project-container-wrapper-box-item-slide project-container-slide-2"
                                     onClick={(e) => handleLightbox(e.currentTarget)}
+                                    style={{ backgroundImage: `url(${currentProject.img3})` }}
                                 >
                                     <div className="project-container-wrapper-box-item-slide-2"></div>
                                 </div>
                                 <div
                                     className="project-container-wrapper-box-item-slide project-container-slide-3"
                                     onClick={(e) => handleLightbox(e.currentTarget)}
+                                    style={{ backgroundImage: `url(${currentProject.img4})` }}
                                 >
                                     <div className="project-container-wrapper-box-item-slide-3"></div>
                                 </div>

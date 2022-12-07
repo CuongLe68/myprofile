@@ -149,7 +149,7 @@
 
 .project-container-wrapper-box-item-imgs {
     margin: 2rem auto;
-    width: 84%;
+    width: 90%;
     height: 26rem;
     display: flex;
 }
@@ -163,20 +163,7 @@
 }
 
 .project-container-wrapper-box-item-imgs-img:nth-child(1) {
-    background-image: url('../../assets/imgs/shoppet1.png');
     width: 100%;
-}
-
-.project-container-wrapper-box-item-imgs-img:nth-child(2) {
-    background-image: url('../../assets/imgs/shoppet2.png');
-}
-
-.project-container-wrapper-box-item-imgs-img:nth-child(3) {
-    background-image: url('../../assets/imgs/shoppet3.png');
-}
-
-.project-container-wrapper-box-item-imgs-img:nth-child(4) {
-    background-image: url('../../assets/imgs/shoppet4.png');
 }
 
 .project-container-wrapper-box-item-left-icon {
@@ -197,7 +184,7 @@
 }
 
 .project-container-wrapper-box-item-left-prev {
-    left: 1rem;
+    left: -1rem;
 }
 
 .project-container-wrapper-box-item-left-prev svg {
@@ -206,7 +193,7 @@
 }
 
 .project-container-wrapper-box-item-left-next {
-    right: 1.6rem;
+    right: -1.8rem;
 }
 
 .project-container-wrapper-box-item-slides {
@@ -234,19 +221,6 @@
 
 .project-container-wrapper-box-item-slide .project-container-wrapper-box-item-slide-0 {
     background: transparent;
-}
-
-.project-container-wrapper-box-item-slide:nth-child(1) {
-    background-image: url('../../assets/imgs/shoppet1.png');
-}
-.project-container-wrapper-box-item-slide:nth-child(2) {
-    background-image: url('../../assets/imgs/shoppet2.png');
-}
-.project-container-wrapper-box-item-slide:nth-child(3) {
-    background-image: url('../../assets/imgs/shoppet3.png');
-}
-.project-container-wrapper-box-item-slide:nth-child(4) {
-    background-image: url('../../assets/imgs/shoppet4.png');
 }
 
 .project-container-wrapper-box-item-right {
@@ -384,10 +358,10 @@
 }
 
 .project-container-body-items div:nth-child(4) {
-    background-image: url('../../assets/imgs/course4.png');
+    background-image: url('../../assets/imgs/course1.png');
     background-position: 50%; /*di chuyển ảnh*/
 }
 
 .project-container-body-items div:nth-child(5) {
-    background-image: url('../../assets/imgs/vcb2.png');
+    background-image: url('../../assets/imgs/vcb1.png');
 }
