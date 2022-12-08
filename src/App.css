@@ -453,13 +453,25 @@
     }
 
     .project-container .project-container-wrapper-box {
-        top: 4rem;
+        top: 3rem;
     }
 
     /* ở đây lỗi khi show box vẫn không scroll được*/
+    .project-container .project-container-wrapper-box {
+        height: 85%;
+    }
+
+    .project-container .project-container-wrapper-box-item {
+        width: 100%;
+    }
+
     .project-container .project-container-wrapper-box-item {
         flex-wrap: wrap;
         overflow-y: auto;
+    }
+
+    .project-container .project-container-wrapper-box-item-left {
+        margin-right: 0;
     }
 
     .project-container .project-container-wrapper-box-item-left {
@@ -468,6 +480,10 @@
 
     .project-container .project-container-wrapper-box-item-right {
         width: 100%;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs {
+        width: 91%;
     }
 
     .project-container .project-container-wrapper-box-item-imgs-img {

@@ -154,12 +154,18 @@ function Project() {
         listProject.map((item) => {
             return `project-container-body-items-item${item.id}` === e.className ? setCurrentProject(item) : '';
         });
+
+        //ẩn tất cả item project để không ảnh hưởng khi scroll phần info project
+        document.querySelector('.project-container-body-items').style.flexWrap = 'nowrap';
     };
 
     //close info project
     const closeInfo = () => {
         const box = document.querySelector('.project-container-wrapper');
         box.style.display = 'none';
+
+        //hiện tất cả item project
+        document.querySelector('.project-container-body-items').style.flexWrap = 'wrap';
     };
 
     //lightbox
