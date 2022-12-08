@@ -149,6 +149,7 @@
     }
 }
 
+/* Nest Hub Max - 1280 x 800 */
 @media screen and (max-width: 1281px) {
     /* navbar */
     .navbar-container .navbar-container-menu-item::before {
@@ -191,6 +192,7 @@
     }
 }
 
+/* Nest Hub - 1024 x 600 */
 @media screen and (max-width: 1025px) {
     /* navbar */
     .App .navbar-container {
@@ -319,4 +321,215 @@
     }
 }
 
-/* nhỏ hơn 1080px, giao diện điện thoại chưa làm */
+/* Surface Pro7 - 912 x 1368 */
+@media screen and (max-width: 913px) {
+    /* home */
+    .home-container .home-container-wrapper {
+        padding: 8rem 0 28rem;
+    }
+
+    .home-container .home-container-wrapper-description {
+        padding: 0px 14rem;
+    }
+
+    /* project */
+    .project-container .project-container-wrapper-box {
+        top: 34rem;
+    }
+
+    /* contact */
+    .contact-container .contact-container-wrapper {
+        display: block;
+    }
+
+    .contact-container .contact-container-wrapper-left {
+        width: 100%;
+    }
+
+    .contact-container .contact-container-wrapper-right {
+        width: 100%;
+        margin: 3rem 0 0;
+    }
+
+    .contact-container .contact-container-wrapper-right-btn {
+        justify-content: center;
+        margin: 1.4rem 0 0;
+    }
+
+    .contact-container .contact-container-wrapper-right-info-des {
+        margin: 1.4rem 0;
+        height: 6rem;
+    }
+
+    .contact-container .contact-container-wrapper-right-info-message {
+        min-height: 32rem;
+    }
+}
+
+/* iPad Air - 820 x 1180 */
+@media screen and (max-width: 821px) {
+    /* home */
+    .home-container .home-container-wrapper {
+        padding: 2rem 0 12rem;
+    }
+
+    .home-container .home-container-wrapper-description {
+        padding: 0px 12rem;
+    }
+
+    /* project */
+    .project-container .project-container-wrapper-box-item-imgs {
+        height: 20rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs-img {
+        height: 18rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-left-icon {
+        height: 20rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-right span {
+        padding: 0.4rem 0;
+    }
+}
+
+/* iPad Mini - 768 x 1024 */
+@media screen and (max-width: 769px) {
+    /* project */
+    .project-container .project-container-body {
+        padding: 2rem 2rem 8rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-slide {
+        height: 6rem;
+    }
+}
+
+/* Suface Duo - 540 x 720 */
+@media screen and (max-width: 541px) {
+    /* navbar */
+    .navbar-container .navbar-container-bulb {
+        margin: 0 2rem;
+    }
+    .navbar-container .navbar-container-menu-item {
+        margin: 0 2rem;
+    }
+
+    /* home */
+    .home-container .home-container-wrapper-description {
+        padding: 0 4rem;
+    }
+
+    /* project */
+    .project-container .project-container-title {
+        padding: 6rem 0;
+    }
+    .project-container .project-container-body ul {
+        flex-wrap: wrap;
+    }
+    .project-container .project-container-body ul li {
+        width: 42%;
+        padding: 1.4rem 1rem;
+        margin: 1rem;
+    }
+
+    .project-container .project-container-title span.project-container-title-block {
+        font-size: 10rem;
+    }
+
+    .project-container .project-container-title h1 {
+        font-size: 5rem;
+    }
+
+    .project-container .project-container-title h1 span {
+        font-size: 5rem;
+    }
+
+    .project-container .project-container-body-items div {
+        width: 100%;
+        height: 23rem;
+    }
+
+    .project-container .project-container-wrapper-box {
+        top: 4rem;
+    }
+
+    /* ở đây lỗi khi show box vẫn không scroll được*/
+    .project-container .project-container-wrapper-box-item {
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+
+    .project-container .project-container-wrapper-box-item-left {
+        width: 100%;
+    }
+
+    .project-container .project-container-wrapper-box-item-right {
+        width: 100%;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs-img {
+        height: 20rem;
+    }
+
+    /* about */
+    .about-container .about-container-title {
+        padding: 6rem 0;
+    }
+
+    .about-container .about-container-title span.about-container-title-block {
+        font-size: 10rem;
+    }
+
+    .about-container .about-container-title h1 {
+        font-size: 5rem;
+    }
+
+    .about-container .about-container-title h1 span {
+        font-size: 5rem;
+    }
+
+    .about-container .about-container-wrapper-title {
+        margin: 1rem 8rem 2rem 5rem;
+    }
+
+    .about-container .about-container-wrapper-left-col p:nth-child(4) span {
+        display: block;
+    }
+
+    .about-container .about-container-wrapper-left-col p:nth-child(5) span {
+        display: block;
+    }
+
+    .about-container .about-container-wrapper-skill h3 {
+        margin: 6rem 0 2rem;
+    }
+
+    .about-container .about-container-wrapper-skill-items-item {
+        width: 50%;
+        margin: 3rem 0;
+    }
+
+    .about-container .about-container-wrapper-education-items {
+        margin-left: 1rem;
+    }
+
+    /* contact */
+    .contact-container .contact-container-title {
+        padding: 6rem 0;
+    }
+
+    .contact-container .contact-container-title span.contact-container-title-block {
+        font-size: 10rem;
+    }
+
+    .contact-container .contact-container-title h1 {
+        font-size: 5rem;
+    }
+
+    .contact-container .contact-container-title h1 span {
+        font-size: 5rem;
+    }
+}

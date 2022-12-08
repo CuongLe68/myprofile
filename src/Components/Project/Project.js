@@ -77,7 +77,7 @@ var listProject = [
         id: 5,
         Title: 'CLONE VCB',
         Description:
-            'Trang web clone về ngân hàng VietComBank. Web về CURD account, đăng ký, đằn nhập, phân quyền, chuyển tiền, nhắn tin, sử dụng thư viện socket.io, sử dụng usename và pass tại README github để test.',
+            'Trang web clone về ngân hàng VietComBank. Web về CURD account, đăng ký, đăng nhập, phân quyền, chuyển tiền, nhắn tin, sử dụng thư viện socket.io, sử dụng usename và pass tại README github để test.',
         Role: 'Frontend',
         Frontend: 'HTML, CSS, JS, ReactJS, ReduxToolkit',
         Backend: 'NodeJS, Socket.io',
