@@ -553,8 +553,13 @@
 /* Samsum Galaxy S20 Ultra, Samsum Galaxy A51/71 - 412 x 915 */
 @media screen and (max-width: 415px) {
     /* navbar */
-    .navbar-container .navbar-container-menu-item {
+    .navbar-container .navbar-container-menu-item,
+    .navbar-container .navbar-container-bulb {
         margin: 0 1.6rem;
+    }
+
+    .navbar-container .navbar-container-bulb {
+        padding: 1.4rem 2.4rem;
     }
 
     /* home */
@@ -669,6 +674,12 @@
 /* Pixel 5 - 393 x 851 */
 /* Iphone 12 Pro - 390 x 844 */
 @media screen and (max-width: 394px) {
+    /* navbar */
+    .navbar-container .navbar-container-bulb,
+    .navbar-container .navbar-container-menu-item {
+        margin: 0px 1.4rem;
+    }
+
     /* project, about, contact */
     .project-container .project-container-title span.project-container-title-block,
     .about-container .about-container-title span.about-container-title-block,
@@ -683,6 +694,17 @@
 
 /* Iphone SE - 375 x 667 */
 @media screen and (max-width: 376px) {
+    /* navbar */
+    .navbar-container .navbar-container-bulb,
+    .navbar-container .navbar-container-menu-item {
+        margin: 0px 1.2rem;
+    }
+
+    /* home */
+    .home-container .home-container-wrapper-description-wrapper a {
+        margin: 2rem 1.4rem;
+    }
+
     /* project */
     .project-container .project-container-body-items div {
         height: 15rem;
@@ -701,8 +723,9 @@
 /* Samsum Galaxy S8+ - 360 x 740 */
 @media screen and (max-width: 361px) {
     /* navbar */
+    .navbar-container .navbar-container-bulb,
     .navbar-container .navbar-container-menu-item {
-        margin: 0 1.2rem;
+        margin: 0 1rem;
     }
 
     /* home */
@@ -746,7 +769,7 @@
 }
 
 /* Galaxy Fold - 280 x 653 */
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 281px) {
     /* navbar */
     .navbar-container .navbar-container-bulb,
     .navbar-container .navbar-container-menu-item {
