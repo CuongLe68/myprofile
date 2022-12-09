@@ -107,7 +107,7 @@
 
     .project-container .project-container-wrapper-box {
         z-index: 10;
-        width: 85%;
+        width: 84%;
     }
 
     .project-container .project-container-wrapper-box-item-imgs {
@@ -456,7 +456,6 @@
         top: 3rem;
     }
 
-    /* ở đây lỗi khi show box vẫn không scroll được*/
     .project-container .project-container-wrapper-box {
         height: 85%;
     }
@@ -547,5 +546,313 @@
 
     .contact-container .contact-container-title h1 span {
         font-size: 5rem;
+    }
+}
+
+/* Iphone XR - 414 x 896 */
+/* Samsum Galaxy S20 Ultra, Samsum Galaxy A51/71 - 412 x 915 */
+@media screen and (max-width: 415px) {
+    /* navbar */
+    .navbar-container .navbar-container-menu-item {
+        margin: 0 1.6rem;
+    }
+
+    /* home */
+    .home-container .home-container-wrapper-description h1 {
+        font-size: 3.4rem;
+    }
+
+    .home-container .home-container-wrapper-description h1 span {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .home-container .home-container-wrapper-description {
+        padding: 0 1.4rem;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper a span {
+        left: 4rem;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper-btn {
+        left: -7.6rem;
+    }
+
+    /* project, about, contact */
+    .project-container .project-container-title,
+    .about-container .about-container-title,
+    .contact-container .contact-container-title {
+        padding: 4rem 0;
+    }
+
+    .project-container .project-container-title span.project-container-title-block,
+    .about-container .about-container-title span.about-container-title-block,
+    .contact-container .contact-container-title span.contact-container-title-block {
+        font-size: 8rem;
+    }
+
+    .project-container .project-container-title h1,
+    .project-container .project-container-title h1 span,
+    .about-container .about-container-title h1,
+    .about-container .about-container-title h1 span,
+    .contact-container .contact-container-title h1,
+    .contact-container .contact-container-title h1 span {
+        font-size: 4rem;
+    }
+
+    /* project */
+    .project-container .project-container-body ul li {
+        width: 90%;
+        padding: 2rem 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .project-container .project-container-body-items div {
+        height: 18rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs {
+        margin: 2rem auto 0;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs-img {
+        height: 16rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-left-icon {
+        height: 16rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-right {
+        margin-left: 0;
+        padding-bottom: 2rem;
+    }
+
+    /* about */
+    .about-container .about-container-wrapper-left {
+        flex-wrap: wrap;
+    }
+
+    .about-container .about-container-wrapper-left-col {
+        width: 100%;
+    }
+
+    .about-container .about-container-wrapper-left {
+        padding-left: 5rem;
+    }
+
+    .about-container .about-container-wrapper-left-col p:nth-child(4) span,
+    .about-container .about-container-wrapper-left-col p:nth-child(5) span {
+        display: inline-block;
+    }
+
+    .about-container .about-container-wrapper-education {
+        padding: 0 1rem;
+    }
+
+    .about-container .about-container-wrapper-education-items-icon {
+        width: 6rem;
+    }
+
+    /* contact */
+    .contact-container .contact-container-wrapper {
+        padding: 2rem 2.4rem 10rem;
+    }
+
+    .contact-container .contact-container-wrapper-right-info-message {
+        min-height: 26rem;
+    }
+}
+
+/* Pixel 5 - 393 x 851 */
+/* Iphone 12 Pro - 390 x 844 */
+@media screen and (max-width: 394px) {
+    /* project, about, contact */
+    .project-container .project-container-title span.project-container-title-block,
+    .about-container .about-container-title span.about-container-title-block,
+    .contact-container .contact-container-title span.contact-container-title-block {
+        font-size: 7rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-slide {
+        height: 4rem;
+    }
+}
+
+/* Iphone SE - 375 x 667 */
+@media screen and (max-width: 376px) {
+    /* project */
+    .project-container .project-container-body-items div {
+        height: 15rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs {
+        height: 16rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs-img,
+    .project-container .project-container-wrapper-box-item-left-icon {
+        height: 14rem;
+    }
+}
+
+/* Samsum Galaxy S8+ - 360 x 740 */
+@media screen and (max-width: 361px) {
+    /* navbar */
+    .navbar-container .navbar-container-menu-item {
+        margin: 0 1.2rem;
+    }
+
+    /* home */
+    .home-container .home-container-wrapper-description-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper a {
+        width: 22rem;
+        height: 6rem;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper-btn {
+        left: -10rem;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper-btn::before {
+        width: 5.8rem;
+        height: 5.8rem;
+        top: -0.4rem;
+        left: -0.9rem;
+    }
+
+    .home-container .home-container-wrapper-description-wrapper a span {
+        left: 7rem;
+        font-size: 1.8rem;
+    }
+
+    /* about */
+    .about-container .about-container-wrapper-title {
+        margin: 1rem 7rem 2rem 5rem;
+    }
+
+    .about-container .about-container-wrapper-education-items-icon {
+        width: 7rem;
+    }
+
+    .about-container-wrapper-education-items-description {
+        margin-left: 1rem;
+    }
+}
+
+/* Galaxy Fold - 280 x 653 */
+@media screen and (max-width: 361px) {
+    /* navbar */
+    .navbar-container .navbar-container-bulb,
+    .navbar-container .navbar-container-menu-item {
+        margin: 0 0.2rem;
+    }
+
+    .navbar-container .navbar-container-bulb {
+        padding: 1.4rem 2.4rem;
+    }
+
+    /* home */
+    .home-container .home-container-wrapper-img img {
+        width: 26rem;
+        height: 26rem;
+    }
+
+    .home-container .home-container-wrapper-description h1 {
+        font-size: 2.6rem;
+    }
+
+    .home-container .home-container-wrapper-description h1 span {
+        font-size: 2.2rem;
+    }
+
+    /* project, about, contact */
+    .project-container .project-container-title span.project-container-title-block,
+    .about-container .about-container-title span.about-container-title-block,
+    .contact-container .contact-container-title span.contact-container-title-block {
+        font-size: 4.6rem;
+    }
+
+    .project-container .project-container-title h1,
+    .project-container .project-container-title h1 span,
+    .about-container .about-container-title h1,
+    .about-container .about-container-title h1 span,
+    .contact-container .contact-container-title h1,
+    .contact-container .contact-container-title h1 span {
+        font-size: 3rem;
+    }
+
+    /* project */
+    .project-container .project-container-body {
+        padding: 2rem 1rem 8rem;
+    }
+
+    .project-container .project-container-body ul li {
+        width: 100%;
+    }
+
+    .project-container .project-container-body-items div {
+        height: 11.2rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs-img,
+    .project-container .project-container-wrapper-box-item-left-icon {
+        height: 10rem;
+    }
+
+    .project-container .project-container-wrapper-box-item-imgs {
+        height: 12rem;
+    }
+
+    /* about */
+    .about-container .about-container-wrapper-title {
+        margin: 1rem 2rem 2rem 2rem;
+    }
+
+    .about-container .about-container-wrapper-left {
+        padding-left: 2rem;
+    }
+
+    .about-container .about-container-wrapper-right-col {
+        width: 42%;
+        margin: 0 1rem;
+    }
+
+    .about-container .about-container-wrapper-right-col {
+        padding: 28px 20px 20px 10px;
+        height: 22rem;
+    }
+
+    .about-container .about-container-wrapper-education-items-icon {
+        width: 9rem;
+    }
+
+    .about-container .about-container-wrapper-education-items-description {
+        margin-left: 1rem;
+    }
+
+    /* contact */
+    .contact-container .contact-container-wrapper {
+        padding: 2rem 1.4rem 10rem;
+    }
+
+    .contact-container .contact-container-wrapper-left-item p {
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+    }
+
+    .contact-container .contact-container-wrapper-right-info {
+        flex-wrap: wrap;
+    }
+
+    .contact-container .contact-container-wrapper-right-info-des {
+        width: 100%;
+        margin-right: 0 !important;
+        height: 5rem;
     }
 }
