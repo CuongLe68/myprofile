@@ -300,35 +300,6 @@
     outline: 1px solid var(--border-color);
     border-radius: 1rem;
     position: relative;
-    animation: delay 0.3s ease-in forwards;
-    opacity: 0;
-    animation-delay: 0.3s;
-}
-
-.project-container-body-items div:nth-child(2) {
-    animation-delay: 0.6s;
-}
-
-.project-container-body-items div:nth-child(3) {
-    animation-delay: 1s;
-}
-
-.project-container-body-items div:nth-child(4) {
-    animation-delay: 1.4s;
-}
-
-.project-container-body-items div:nth-child(5) {
-    animation-delay: 1.8s;
-}
-/* ở đây lỗi  */
-@keyframes delay {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .project-container-body-items div h3 {
